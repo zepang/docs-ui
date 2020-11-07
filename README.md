@@ -53,7 +53,7 @@ npm install -D editorconfig
 snowpack dev
 ```
 
-- 创建`index.html`
+- 创建`public/index.html`
 
 ```html
 <!DOCTYPE html>
@@ -87,6 +87,7 @@ snowpack dev
 ```js
 module.exports = {
   mount: {
+    src: '/_dist_',
     public: '/'
   },
   plugins: ['@snowpack/plugin-vue']
@@ -109,10 +110,18 @@ app.mount('#app')
 并在`index.html`中加入如下代码，引入js。
 
 ```html
-<script type="module" src="/src/index.js"></script>
+<script type="module" src="/_dist_/index.js"></script>
 ```
 
 重新运行项目，成功使用Vue在页面上渲染改标题。
+
+- 添加typescript支持
+
+```
+npm install typescript
+```
+
+- 其它文件
 
 - .editorconfig(需要提前在全局或者项目中安装 editorconfig)
 
@@ -131,3 +140,4 @@ insert_final_newline = true
 ```
 # 直接在 https://github.com/github/gitignore 仓库中找到node项目的ignore文件内容复制粘贴
 ```
+
