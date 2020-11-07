@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "snowpack dev"
   },
   "keywords": [
     "vue",
@@ -14,5 +15,13 @@
     "web component"
   ],
   "author": "zepang",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@snowpack/plugin-vue": "^2.2.5",
+    "vue": "^3.0.2"
+  },
+  "devDependencies": {
+    "editorconfig": "^0.15.3",
+    "snowpack": "^2.17.0"
+  }
 }
