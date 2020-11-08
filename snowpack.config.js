@@ -3,5 +3,9 @@ module.exports = {
     src: '/_dist_',
     public: '/'
   },
-  plugins: ['@snowpack/plugin-vue', '@snowpack/plugin-typescript']
+  plugins: ['@snowpack/plugin-vue', '@snowpack/plugin-typescript'],
+  buildOptions: {
+    out: 'dist',
+    clean: true
+  }
 }
